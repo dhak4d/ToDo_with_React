@@ -14,8 +14,7 @@ export const Todos=(props) =>{
         <p>There's Empty List</p>) :
          (props.todos.map((todo) => {
           return (
-            <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} showDelete={props.todos.length > 0} // Conditionally render delete button
-            />
+            <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
           );
         })
       )}

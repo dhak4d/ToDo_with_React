@@ -1,6 +1,5 @@
 
 import './App.css';
-
 import Header from "./MyComponents/Header";
 import {Todos} from "./MyComponents/Todos";
 import {Footer} from "./MyComponents/Footer";
@@ -17,7 +16,6 @@ if(localStorage.getItem("todos")===null){
 else{
   initTodo = JSON.parse(localStorage.getItem("todos"))
 }
-
 
   const onDelete=(todo)=>{
     console.log('I am delete Btn of todo', todo);
@@ -53,36 +51,24 @@ else{
     localStorage.setItem("todos", JSON.stringify(todos));
     },[todos])
 
-
   return (
     <>
-    
-
  <Router>
     <Header title="MyToDos" searchBar={false}/>
     <Switch>
-     
       <Route exact path="/" render={()=>{
         return(
         <>
-         <AddTodo addTodo={addTodo}/>
+        <AddTodo addTodo={addTodo}/>
         <Todos todos={todos} onDelete={onDelete}/>
         </>)
       }}>
       </Route>
-
-      <Route exact path="/about">
-        <About/>
-        </Route>
-
+      <Route exact path="/about"><About/></Route>
     </Switch>
-   
     <Footer/>
     </Router> 
-
-    
     </> 
-    
   );
 }
 export default App;

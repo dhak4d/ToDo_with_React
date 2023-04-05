@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 export const AddTodo=({addTodo})=> { 
 
   const[title, setTitle]=useState("");

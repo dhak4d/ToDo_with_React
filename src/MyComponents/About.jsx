@@ -29,7 +29,7 @@ export default function About() {
 
             <ul>
           <li>Improves your memory</li>
-          <li>ncreases productivity</li>
+          <li>increases productivity</li>
           <li>Helps with motivation</li>
         </ul>
        
